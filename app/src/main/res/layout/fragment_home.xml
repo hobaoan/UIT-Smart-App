@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/homeFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/headerHome"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="-1dp"
+        android:background="@color/maincolor" />
+
+    <RelativeLayout
+        android:id="@+id/rltWeather"
+        android:layout_below="@+id/headerHome"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" >
+
+        <RelativeLayout
+            android:id="@+id/weather"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/custom_weatherhome">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/weather"/>
+
+            <TextView
+                android:id="@+id/tvWeather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:width="180dp"
+
+                android:textColor="@color/darkblue"
+                android:gravity="center"
+                android:textSize="100dp"
+                android:textStyle="bold" />
+
+
+            <ImageView
+                android:id="@+id/imghumidity"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/tvWeather"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/humidity" />
+
+            <ImageView
+                android:id="@+id/imgcloud"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/imghumidity"
+                android:layout_toRightOf="@+id/tvWeather"
+                app:srcCompat="@drawable/cloud" />
+
+            <ImageView
+                android:id="@+id/imgwindy"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/imgcloud"
+                android:layout_toRightOf="@+id/tvWeather"
+                app:srcCompat="@drawable/windy" />
+
+            <TextView
+                android:id="@+id/tvHumidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/imghumidity"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tvCloud"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvHumidity"
+                android:layout_marginTop="30dp"
+                android:layout_toRightOf="@+id/imgcloud"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tvWindy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvCloud"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/imghumidity"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:textSize="20dp" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/gr1"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/rltWeather"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/map"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/shadow">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="30dp"
+                android:src="@drawable/map"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:textAlignment="center"
+                android:text="UIT Map"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/healthy"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/map"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/shadow">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/health"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:textAlignment="center"
+                android:text="Health"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/gr2"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/gr1"
+        android:layout_marginTop="30dp"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/device"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/shadow">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/open"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/device"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/shadow">
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

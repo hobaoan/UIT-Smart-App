@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:id="@+id/listItemWeather">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="5dp"
+        android:layout_marginHorizontal="10dp"
+        android:background="@drawable/custom_itemlistweather">
+        <RelativeLayout
+            android:id="@+id/rltLeft"
+            android:layout_width="150dp"
+            android:layout_height="match_parent" >
+            <TextView
+                android:id="@+id/itemDay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:text="Sunday"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/itemDays"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/itemDay"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:text="27/11/2022"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/rltLeft">
+
+            <ImageView
+                android:id="@+id/itemStatus"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:src="@drawable/cloud"/>
+
+            <TextView
+                android:id="@+id/itemTemp"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginLeft="0dp"
+                android:layout_toRightOf="@+id/itemStatus"
+                android:gravity="center"
+                android:text="25°C"
+                android:textColor="@color/white"
+                android:textSize="35dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

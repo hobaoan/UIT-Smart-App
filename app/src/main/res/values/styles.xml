@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomDialogLogin" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/custom_dialoglogin</item>
+    </style>
+    
+    <style name="BottonSheetDialogTheme" parent="Theme.Design.BottomSheetDialog">
+
+    </style>
+
+</resources>

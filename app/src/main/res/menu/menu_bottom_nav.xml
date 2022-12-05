@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_home"
+        android:title="@string/action_home"
+        android:icon="@drawable/home"/>
+    <item android:id="@+id/action_statistic"
+        android:title="@string/action_statistic"
+        android:icon="@drawable/chart"/>
+    <item android:id="@+id/action_setting"
+        android:title="@string/action_setting"
+        android:icon="@drawable/setting"/>
+</menu>

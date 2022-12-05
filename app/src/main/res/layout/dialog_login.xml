@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:id="@+id/icUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="58dp"
+        android:src="@drawable/ic_username"
+        />
+
+    <EditText
+        android:id="@+id/etUserName"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:hint="Tài khoản"
+        android:textColorHint="@color/darkblue"
+        android:inputType="textPersonName" />
+
+    <ImageView
+        android:id="@+id/icPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="122dp"
+        android:src="@drawable/ic_password" />
+
+    <EditText
+        android:id="@+id/etPassWord"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etUserName"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:hint="Mật khẩu"
+        android:textColorHint="@color/darkblue"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnLoginDL"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:height="20dp"
+        android:layout_below="@+id/etPassWord"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/custom_button"
+        android:layout_marginBottom="50dp"
+        android:text="Đăng nhập"
+        android:textColor="@color/white"/>
+
+</RelativeLayout>
