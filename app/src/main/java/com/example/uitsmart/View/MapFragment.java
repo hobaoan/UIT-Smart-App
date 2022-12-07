@@ -209,14 +209,14 @@ public class MapFragment extends Fragment implements OnMapReadyCallback{
                                                                     public void onClick(View v) {
 
                                                                         WeatherAssetFragment.arrayList = new ArrayList<>();
-                                                                        WeatherAssetFragment.arrayList.add(new ItemDetail("Temperature", temp, R.drawable.cloud));
-                                                                        WeatherAssetFragment.arrayList.add(new ItemDetail("Humidity", humidity, R.drawable.cloud));
-                                                                        WeatherAssetFragment.arrayList.add(new ItemDetail("Pressure", pressure, R.drawable.cloud));
-                                                                        WeatherAssetFragment.arrayList.add(new ItemDetail("Sea leve", sea_level, R.drawable.cloud));
-                                                                        WeatherAssetFragment.arrayList.add(new ItemDetail("Feels like", feels_like, R.drawable.cloud));
+                                                                        WeatherAssetFragment.arrayList.add(new ItemDetail("Temperature", temp + "°C", R.drawable.weather));
+                                                                        WeatherAssetFragment.arrayList.add(new ItemDetail("Humidity", humidity + "%", R.drawable.humidity));
+                                                                        WeatherAssetFragment.arrayList.add(new ItemDetail("Pressure", pressure + "Mpa", R.drawable.maxtemp));
+                                                                        WeatherAssetFragment.arrayList.add(new ItemDetail("Sea level", sea_level + "m", R.drawable.mintemp));
+                                                                        WeatherAssetFragment.arrayList.add(new ItemDetail("Feels like", feels_like + "°C", R.drawable.cloud));
                                                                         WeatherAssetFragment.arrayList.add(new ItemDetail("Ground level",grnd_level, R.drawable.cloud));
-                                                                        WeatherAssetFragment.arrayList.add(new ItemDetail("Speed",speed, R.drawable.cloud));
-                                                                        WeatherAssetFragment.arrayList.add(new ItemDetail("Clouds",all, R.drawable.cloud));
+                                                                        WeatherAssetFragment.arrayList.add(new ItemDetail("Speed",speed + "m/s", R.drawable.windy));
+                                                                        WeatherAssetFragment.arrayList.add(new ItemDetail("Clouds",all + "%", R.drawable.cloud));
 
                                                                         bottomSheetDialog.dismiss();
                                                                         WeatherAssetFragment weatherAssetFragment = new WeatherAssetFragment();

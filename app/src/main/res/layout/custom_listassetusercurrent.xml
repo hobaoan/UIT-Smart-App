@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:text="Temperature"
+        android:textSize="20dp"
         android:textColor="@color/black"
         android:textStyle="bold"/>
 
@@ -28,9 +28,9 @@
             android:id="@+id/icon"
             android:layout_width="100dp"
             android:layout_alignParentStart="true"
-            android:layout_height="70dp"
+            android:layout_height="50dp"
             android:layout_marginLeft="10dp"
-            app:srcCompat="@drawable/cloud" />
+           />
         <TextView
             android:id="@+id/dataAsset"
             android:layout_width="wrap_content"

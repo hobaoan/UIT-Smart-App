@@ -11,7 +11,18 @@
         android:layout_height="150dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="-1dp"
-        android:background="@color/maincolor" />
+        android:background="@color/maincolor" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Welcom UIT Smart"
+            android:gravity="center"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            android:textColor="@color/darkblue"/>
+
+    </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/rltWeather"
@@ -196,6 +207,25 @@
             android:layout_height="match_parent"
             android:background="@drawable/shadow">
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/weather"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:textAlignment="center"
+                android:text="WeatherAsset"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"
+                android:textSize="20dp" />
+
         </RelativeLayout>
 
         <RelativeLayout
@@ -205,6 +235,25 @@
             android:layout_toRightOf="@id/device"
             android:layout_marginLeft="20dp"
             android:background="@drawable/shadow">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/humidity"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:textAlignment="center"
+                android:text="Rain Fall"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"
+                android:textSize="20dp" />
 
         </RelativeLayout>
     </RelativeLayout>
