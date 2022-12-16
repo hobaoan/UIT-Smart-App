@@ -3,7 +3,6 @@ package com.example.uitsmart.View;
 import static com.example.uitsmart.SSLHandle.SSLHandle.handleSSLHandshake;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,11 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
@@ -27,17 +22,14 @@ import com.androidplot.xy.XYGraphWidget;
 import com.androidplot.xy.XYPlot;
 import com.androidplot.xy.XYSeries;
 import com.example.uitsmart.R;
-import com.example.uitsmart.access.AccessAPI;
 
-import org.json.JSONException;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.text.FieldPosition;
 import java.text.Format;
 import java.text.ParsePosition;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -46,9 +38,10 @@ public class StatisticFragment extends Fragment{
     RequestQueue mRequestQueue;
     JsonObjectRequest jsonObjectRequest;
     JsonArrayRequest jsonArrayRequest;
-    double speed = 0;
+    JSONArray assetBounds;
     ArrayList<JSONObject> arr = new ArrayList<JSONObject>();
     XYPlot plot;
+    int Count = 0;
 
 
     @Nullable
@@ -62,6 +55,8 @@ public class StatisticFragment extends Fragment{
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+
+        //setStatistc
         plot = (XYPlot) view.findViewById(R.id.plot);
         handleSSLHandshake();
         mRequestQueue = Volley.newRequestQueue(getActivity());
@@ -80,7 +75,7 @@ public class StatisticFragment extends Fragment{
         t.schedule(new TimerTask() {
             @Override
             public void run() {
-                // JSON Object type
+                /*// JSON Object type
                 jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, AccessAPI.getUrlUserCurrent(), null,
                         new Response.Listener<JSONObject>() {
                             @Override
@@ -112,7 +107,7 @@ public class StatisticFragment extends Fragment{
                         return params;
                     }
                 };
-                mRequestQueue.add(jsonObjectRequest);
+                mRequestQueue.add(jsonObjectRequest);*/
             }
 
         }, 0, 5000);

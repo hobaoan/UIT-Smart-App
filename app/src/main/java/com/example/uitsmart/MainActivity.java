@@ -1,5 +1,7 @@
 package com.example.uitsmart;
 
+import android.content.IntentFilter;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -9,6 +11,7 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.uitsmart.Adapter.ViewPagerAdapter;
+import com.example.uitsmart.Service.BroadcastReceiver;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -16,11 +19,13 @@ public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNav;
     private ViewPager mViewPager;
+    private BroadcastReceiver broadcastReceiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        broadcastReceiver = new BroadcastReceiver();
 
         mViewPager = findViewById(R.id.viewPager);
         bottomNav = findViewById(R.id.bottomNav);
@@ -50,6 +55,19 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        IntentFilter intentFilter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
+        registerReceiver(broadcastReceiver, intentFilter);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unregisterReceiver(broadcastReceiver);
     }
 
     // setup fragment vô các lựa chọn bằng Adapter

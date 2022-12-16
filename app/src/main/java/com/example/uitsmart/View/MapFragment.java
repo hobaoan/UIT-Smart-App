@@ -126,8 +126,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback{
 
                                                    String nameMarker = jsonObject.getString("name");
 
-
-
                                                    if (String.valueOf(assetBounds).isEmpty()) {
                                                    }
                                                    else {

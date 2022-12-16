@@ -1,23 +1,122 @@
 package com.example.uitsmart.Service;
 
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.ConnectivityManager;
 import android.net.Network;
 import android.net.NetworkCapabilities;
 import android.net.NetworkInfo;
 import android.os.Build;
+import android.util.Log;
 import android.widget.Toast;
 
-public class BroadcastReceive extends BroadcastReceiver {
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+import com.androidplot.xy.XYPlot;
+import com.example.uitsmart.SQLite.DatabaseHelper;
+import com.example.uitsmart.access.AccessAPI;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
+public class BroadcastReceiver extends android.content.BroadcastReceiver {
+
+    RequestQueue mRequestQueue;
+    JsonObjectRequest jsonObjectRequest;
+    JsonArrayRequest jsonArrayRequest;
+    JSONArray assetBounds;
+    ArrayList<JSONObject> arr = new ArrayList<JSONObject>();
+    XYPlot plot;
+    int Count = 0;
+
     @Override
     public void onReceive(Context context, Intent intent) {
         if (ConnectivityManager.CONNECTIVITY_ACTION.equals(intent.getAction())) {
             if (isNetworkAvailable(context)) {
-                Toast.makeText(context, "Co", Toast.LENGTH_SHORT).show();
+                //Create Database
+                DatabaseHelper databaseHelper = new DatabaseHelper(context);
+
+                RequestQueue aRequestQueue = Volley.newRequestQueue(context);
+
+                jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, AccessAPI.getUrlUserCurrent(), null,
+                        new Response.Listener<JSONArray>() {
+                            @Override
+                            public void onResponse(JSONArray response) {
+                                Log.e("MyResponseData",""+ response);
+                                for (int i = 0; i < 84; i ++) {
+                                    try {
+                                        JSONObject jsonObject = new JSONObject(String.valueOf(response.get(i)));
+                                        JSONObject jsonObjectAttributes = jsonObject.getJSONObject("attributes");
+                                        JSONObject jsonObjectLocation = jsonObjectAttributes.getJSONObject("location");
+                                        JSONObject jsonObjectValue = jsonObjectLocation.getJSONObject("value");
+                                        JSONObject jsonObjectWeatherData = jsonObjectAttributes.getJSONObject("weatherData");
+                                        JSONObject jsonObjectValueWeather = jsonObjectWeatherData.getJSONObject("value");
+                                        JSONObject jsonObjectMain = jsonObjectValueWeather.getJSONObject("main");
+                                        JSONObject jsonObjectWind = jsonObjectValueWeather.getJSONObject("wind");
+                                        assetBounds = jsonObjectValue.getJSONArray("coordinates");
+
+                                        if (String.valueOf(assetBounds).isEmpty()) {
+                                        }
+                                        else {
+                                            Count ++;
+                                            if (Count == 1) {
+                                                String temp =  jsonObjectMain.getString("temp");
+                                                String humidity = jsonObjectMain.getString("humidity");
+                                                String speed = jsonObjectWind.getString("speed");
+
+                                                String time = jsonObjectValueWeather.getString("dt");
+                                                long l1 = Long.valueOf(time);
+                                                Date date1 = new Date(l1*1000L);
+                                                SimpleDateFormat simpleDateFormat1 = new SimpleDateFormat("yyyy-MM-dd");
+                                                String formatDays = simpleDateFormat1.format(date1);
+                                                Log.e("Days",formatDays );
+
+                                               // databaseHelper.QueryData("INSERT INTO WEATHERASSET1 VALUES("+temp+","+humidity+","+speed+","+time+")");
+                                            }
+
+
+                                        }
+
+                                    } catch (JSONException e) {
+                                        e.printStackTrace();
+                                    }
+                                }
+                            }
+                        },
+                        new Response.ErrorListener() {
+                            @Override
+                            public void onErrorResponse(VolleyError error) {
+                                Log.e("MyErrorData", "" + error);
+                            }
+                        }) {
+                    @Override
+                    public java.util.Map<String, String> getHeaders() throws AuthFailureError {
+                        Map<String, String> params = new HashMap<String, String>();
+                        params.put("accept", "application/json;");
+                        params.put("Authorization", "Bearer " + AccessAPI.getToken());
+                        return params;
+                    }
+                };
+                aRequestQueue.add(jsonArrayRequest);
+                SQLiteDatabase database = databaseHelper.getReadableDatabase();
+                database.close();
+
             } else {
-                Toast.makeText(context, "No", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "No Connect Internet", Toast.LENGTH_SHORT).show();
             }
         }
     }

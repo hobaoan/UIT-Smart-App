@@ -24,6 +24,7 @@ import com.android.volley.toolbox.Volley;
 import com.example.uitsmart.Adapter.WeatherAdapter;
 import com.example.uitsmart.Model.Weather;
 import com.example.uitsmart.R;
+import com.example.uitsmart.access.AccessAPI;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
@@ -138,8 +139,7 @@ public class Weather_Fragment extends Fragment {
     }
     public void GetCurrentWeatherData(String data) {
         RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
-        String url = "https://api.openweathermap.org/data/2.5/weather?q="+data+"&units=metric&appid=ac212f5768bf3e2f84201adbd2bc7961";
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, AccessAPI.getUrlGoogleWeather(),
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
