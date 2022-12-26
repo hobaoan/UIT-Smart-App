@@ -61,7 +61,7 @@ public class WindStatisticFragment extends Fragment{
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        plot = (XYPlot) view.findViewById(R.id.plot);
+        plot = (XYPlot) view.findViewById(R.id.plot3);
         handleSSLHandshake();
         mRequestQueue = Volley.newRequestQueue(getActivity());
 
@@ -73,13 +73,13 @@ public class WindStatisticFragment extends Fragment{
             Date date1 = new Date(l1*1000L);
             SimpleDateFormat simpleDateFormat1 = new SimpleDateFormat("dd-MM");
             String formatDays = simpleDateFormat1.format(date1);
-            if (formatDays.equals(example) == false) {
+//            if (formatDays.equals(example) == false) {
                 temperatures.add(cursor.getDouble(0));
                 humidities.add(cursor.getDouble(1));
                 winds.add(cursor.getDouble(2));
                 times.add(formatDays);
                 example = formatDays;
-            }
+//            }
             cursor.moveToNext();
         }
         cursor.close();
