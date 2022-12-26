@@ -26,7 +26,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql = "CREATE TABLE WEATHERASSET1 (temperature char primary key, humidity integer, wind char, time char )";
+        String sql = "CREATE TABLE WEATHERASSET(temperature char, humidity integer, wind char, time char )";
         db.execSQL(sql);
 
     }

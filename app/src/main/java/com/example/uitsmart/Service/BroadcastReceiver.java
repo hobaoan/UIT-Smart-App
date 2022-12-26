@@ -85,7 +85,13 @@ public class BroadcastReceiver extends android.content.BroadcastReceiver {
                                                 String formatDays = simpleDateFormat1.format(date1);
                                                 Log.e("Days",formatDays );
 
-                                               // databaseHelper.QueryData("INSERT INTO WEATHERASSET1 VALUES("+temp+","+humidity+","+speed+","+time+")");
+                                                databaseHelper.QueryData("INSERT INTO WEATHERASSET VALUES("+temp+","+humidity+","+speed+","+time+")");
+                                                //databaseHelper.QueryData("INSERT INTO WEATHERASSET (temperature, humidity, wind, time) VALUES('14.98', '48','2.11','1671030731')");
+                                                //databaseHelper.QueryData("INSERT INTO WEATHERASSET (temperature, humidity, wind, time) VALUES('13.98', '56','1.11','1671039957')");
+                                                //databaseHelper.QueryData("INSERT INTO WEATHERASSET (temperature, humidity, wind, time) VALUES('21.98', '44','2.98','1671092437')");
+                                                //databaseHelper.QueryData("INSERT INTO WEATHERASSET (temperature, humidity, wind, time) VALUES('19.98', '58','4.39','1671106486')");
+                                                //databaseHelper.QueryData("INSERT INTO WEATHERASSET (temperature, humidity, wind, time) VALUES('17.98', '64','3.3','1671113830')");1671113830
+
                                             }
 
 
@@ -100,7 +106,7 @@ public class BroadcastReceiver extends android.content.BroadcastReceiver {
                         new Response.ErrorListener() {
                             @Override
                             public void onErrorResponse(VolleyError error) {
-                                Log.e("MyErrorData", "" + error);
+                                Log.e("MyErrorDataBroadcast", "" + error);
                             }
                         }) {
                     @Override
