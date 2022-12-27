@@ -34,7 +34,7 @@ public class StatisticFragment extends Fragment{
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        viewPager = view.findViewById(R.id.viewPagerStatistic);
+        /*viewPager = view.findViewById(R.id.viewPagerStatistic);
         navigationView = view.findViewById(R.id.bottomNavStatistic);
 
         setUpViewPager();
@@ -91,6 +91,6 @@ public class StatisticFragment extends Fragment{
             public void onPageScrollStateChanged(int state) {
 
             }
-        });
+        });*/
     }
 }

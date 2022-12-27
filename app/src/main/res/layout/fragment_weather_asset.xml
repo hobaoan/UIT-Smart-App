@@ -6,8 +6,10 @@
     tools:context=".View.WeatherAssetFragment"
     android:background="@color/maincolor">
 
-    
-
+    <RelativeLayout
+        android:layout_width="180dp"
+        android:layout_height="match_parent"
+        android:background="@color/darkblue"/>
     <ListView
         android:id="@+id/lvItemDetail"
         android:layout_width="match_parent"

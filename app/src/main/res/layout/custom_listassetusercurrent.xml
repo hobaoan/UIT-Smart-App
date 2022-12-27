@@ -3,44 +3,67 @@
     android:id="@+id/itemDetail"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="80dp"
+    android:layout_height="130dp"
+    android:layout_marginTop="15dp"
     android:layout_marginVertical="5dp">
 
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:textSize="20dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"/>
-
     <RelativeLayout
-        android:layout_below="@id/name"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginHorizontal="10dp"
-        android:background="@drawable/custom_item_asset">
+        android:layout_height="match_parent"
+        android:layout_marginLeft="-20dp"
+        android:layout_marginVertical="22dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/custom_item_asset"
+        android:layout_toRightOf="@+id/rltcircle">
 
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/darkblue"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:text="Temperature"/>
 
-        <ImageView
-            android:id="@+id/icon"
-            android:layout_width="100dp"
-            android:layout_alignParentStart="true"
-            android:layout_height="50dp"
-            android:layout_marginLeft="10dp"
-           />
         <TextView
             android:id="@+id/dataAsset"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="20dp"
             android:gravity="center"
-            android:textSize="30dp"
-            android:layout_marginRight="20dp"
-            android:text="20°C"/>
+            android:layout_below="@+id/name"
+            android:textColor="@color/darkblue"
+
+            android:textSize="35dp"
+            android:text="19.98"/>
 
     </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rltcircle"
+        android:layout_width="110dp"
+        android:layout_marginStart="15dp"
+        android:layout_height="110dp"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/custom_circle"
+        android:layout_marginLeft="30dp">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:src="@drawable/cloud">
+
+        </ImageView>
+    </RelativeLayout>
+
 
 </RelativeLayout>
