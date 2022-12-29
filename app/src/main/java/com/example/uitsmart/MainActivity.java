@@ -43,10 +43,6 @@ public class MainActivity extends AppCompatActivity {
                         mViewPager.setCurrentItem(0);
                         getSupportActionBar().setTitle("Home");
                         break;
-                    case R.id.action_statistic:
-                        mViewPager.setCurrentItem(1);
-                        getSupportActionBar().setTitle("Statistic");
-                        break;
                     case R.id.action_setting:
                         mViewPager.setCurrentItem(3);
                         getSupportActionBar().setTitle("Setting");
@@ -90,9 +86,6 @@ public class MainActivity extends AppCompatActivity {
                         bottomNav.getMenu().findItem(R.id.action_home).setChecked(true);
                         break;
                     case 1:
-                        bottomNav.getMenu().findItem(R.id.action_statistic).setChecked(true);
-                        break;
-                    case 2:
                         bottomNav.getMenu().findItem(R.id.action_setting).setChecked(true);
                         break;
                 }

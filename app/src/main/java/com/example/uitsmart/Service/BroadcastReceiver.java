@@ -85,7 +85,7 @@ public class BroadcastReceiver extends android.content.BroadcastReceiver {
                                                 String formatDays = simpleDateFormat1.format(date1);
                                                 Log.e("Days",formatDays );
 
-                                                databaseHelper.QueryData("INSERT INTO WEATHERASSET VALUES("+temp+","+humidity+","+speed+","+time+")");
+                                                //databaseHelper.QueryData("INSERT INTO WEATHERASSET VALUES("+temp+","+humidity+","+speed+","+time+")");
                                                 //databaseHelper.QueryData("INSERT INTO WEATHERASSET (temperature, humidity, wind, time) VALUES('14.98', '48','2.11','1671030731')");
                                                 //databaseHelper.QueryData("INSERT INTO WEATHERASSET (temperature, humidity, wind, time) VALUES('13.98', '56','1.11','1671039957')");
                                                 //databaseHelper.QueryData("INSERT INTO WEATHERASSET (temperature, humidity, wind, time) VALUES('21.98', '44','2.98','1671092437')");

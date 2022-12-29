@@ -29,7 +29,7 @@ import org.json.JSONObject;
 
 public class HomeFragment extends Fragment{
 
-    RelativeLayout map, weather, statistic;
+    RelativeLayout map, weather, statistic, direct;
     TextView tvWeather, tvHumidity, tvCloud, tvWindy;
 
     @Nullable
@@ -91,6 +91,21 @@ public class HomeFragment extends Fragment{
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
 
                 transaction.replace(R.id.homeFragment,statisticFragment );
+                transaction.addToBackStack(null);
+
+                transaction.commit();
+            }
+        });
+
+        //setClickDirect
+        direct = view.findViewById(R.id.direct);
+        direct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DirectFragment directFragment = new DirectFragment();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+
+                transaction.replace(R.id.homeFragment,directFragment );
                 transaction.addToBackStack(null);
 
                 transaction.commit();
