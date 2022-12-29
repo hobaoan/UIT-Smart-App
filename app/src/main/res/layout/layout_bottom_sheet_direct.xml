@@ -5,74 +5,95 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/maincolor"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:padding="10dp"
     app:behavior_hideable = "true"
     app:behavior_peekHeight = "0dp"
     app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
+
     <LinearLayout
-        android:layout_width="190dp"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <Button
-            android:id="@+id/btna"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="">
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginHorizontal="5dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/custom_button"
-            android:text="Building A"></Button>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:text="Direction"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/darkblue"/>
 
-        <Button
-            android:id="@+id/btnb"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginHorizontal="5dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/custom_button"
-            android:text="Building B"></Button>
-
-        <Button
-            android:id="@+id/btnc"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginHorizontal="5dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/custom_button"
-            android:text="Building C"></Button>
-
-        <Button
-            android:id="@+id/btne"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginHorizontal="5dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/custom_button"
-            android:text="Building E"></Button>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:layout_height="match_parent" >
+        <LinearLayout
+            android:layout_width="190dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/marker"/>
-        <TextView
-            android:id="@+id/tvNameAssetDirect"
+            <Button
+                android:id="@+id/btna"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/custom_button"
+                android:text="Building A"></Button>
+
+            <Button
+                android:id="@+id/btnb"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/custom_button"
+                android:text="Building B"></Button>
+
+            <Button
+                android:id="@+id/btnc"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/custom_button"
+                android:text="Building C"></Button>
+
+            <Button
+                android:id="@+id/btne"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/custom_button"
+                android:text="Building E"></Button>
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Weather Asset 1"
-            android:layout_marginTop="10dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:textColor="@color/darkblue"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/marker"/>
+            <TextView
+                android:id="@+id/tvNameAssetDirect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Weather Asset 1"
+                android:layout_marginTop="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/red"/>
+        </LinearLayout>
     </LinearLayout>
 
 

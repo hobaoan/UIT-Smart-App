@@ -174,6 +174,7 @@ public class DirectFragment extends Fragment implements OnMapReadyCallback {
                                             LatLng point_a3 = new LatLng(10.869296887115464, 106.8031115506875);
                                             LatLng point_e3 = new LatLng(10.869811919423809, 106.80233667397982);
 
+
                                             //set onclick marker
                                             googleMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
                                                 @Override
@@ -208,15 +209,21 @@ public class DirectFragment extends Fragment implements OnMapReadyCallback {
                                                                 btnc = viewDialog.findViewById(R.id.btnc);
                                                                 btne = viewDialog.findViewById(R.id.btne);
 
-                                                                Polyline polyline1;
-                                                                Polyline polyline2;
-                                                                Polyline polyline3;
+
+
                                                                 btna.setOnClickListener(new View.OnClickListener() {
                                                                     @Override
                                                                     public void onClick(View v) {
                                                                         String name1 = "Weather Asset";
                                                                         String name2 = "Weather Asset 2";
                                                                         if (nameMarker.equals(name1) == true) {
+                                                                            googleMap.clear();
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.870464609989156,106.80273973945748
+                                                                            )).title("Weather Asset 1"));
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.870537960015568, 106.80390988702072
+                                                                            )).title("Weather Asset 2"));
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.869792504441904, 106.80308672274282
+                                                                            )).title("Weather Asset 3"));
                                                                             googleMap.addPolyline(new PolylineOptions().add(
                                                                                                     B_A,
                                                                                                     locationUserCurrent
@@ -226,6 +233,13 @@ public class DirectFragment extends Fragment implements OnMapReadyCallback {
                                                                             );
                                                                         }
                                                                         else if (nameMarker.equals(name2) == true) {
+                                                                            googleMap.clear();
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.870464609989156,106.80273973945748
+                                                                            )).title("Weather Asset 1"));
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.870537960015568, 106.80390988702072
+                                                                            )).title("Weather Asset 2"));
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.869792504441904, 106.80308672274282
+                                                                            )).title("Weather Asset 3"));
                                                                             googleMap.addPolyline(new PolylineOptions().add(
                                                                                                     B_A,
                                                                                                     point1,
@@ -239,6 +253,13 @@ public class DirectFragment extends Fragment implements OnMapReadyCallback {
                                                                             );
                                                                         }
                                                                         else {
+                                                                            googleMap.clear();
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.870464609989156,106.80273973945748
+                                                                            )).title("Weather Asset 1"));
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.870537960015568, 106.80390988702072
+                                                                            )).title("Weather Asset 2"));
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.869792504441904, 106.80308672274282
+                                                                            )).title("Weather Asset 3"));
                                                                             googleMap.addPolyline(new PolylineOptions().add(
                                                                                                     B_A,
                                                                                                     point1,
@@ -261,6 +282,13 @@ public class DirectFragment extends Fragment implements OnMapReadyCallback {
                                                                         String name1 = "Weather Asset";
                                                                         String name2 = "Weather Asset 2";
                                                                         if (nameMarker.equals(name1) == true) {
+                                                                            googleMap.clear();
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.870464609989156,106.80273973945748
+                                                                            )).title("Weather Asset 1"));
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.870537960015568, 106.80390988702072
+                                                                            )).title("Weather Asset 2"));
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.869792504441904, 106.80308672274282
+                                                                            )).title("Weather Asset 3"));
                                                                             googleMap.addPolyline(new PolylineOptions().add(
                                                                                                     B_B,
                                                                                                     point12,
@@ -274,6 +302,13 @@ public class DirectFragment extends Fragment implements OnMapReadyCallback {
                                                                             );
                                                                         }
                                                                         else if (nameMarker.equals(name2) == true) {
+                                                                            googleMap.clear();
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.870464609989156,106.80273973945748
+                                                                            )).title("Weather Asset 1"));
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.870537960015568, 106.80390988702072
+                                                                            )).title("Weather Asset 2"));
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.869792504441904, 106.80308672274282
+                                                                            )).title("Weather Asset 3"));
                                                                             googleMap.addPolyline(new PolylineOptions().add(
                                                                                                     B_B,
                                                                                                     locationUserCurrent
@@ -283,6 +318,13 @@ public class DirectFragment extends Fragment implements OnMapReadyCallback {
                                                                             );
                                                                         }
                                                                         else {
+                                                                            googleMap.clear();
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.870464609989156,106.80273973945748
+                                                                            )).title("Weather Asset 1"));
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.870537960015568, 106.80390988702072
+                                                                            )).title("Weather Asset 2"));
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.869792504441904, 106.80308672274282
+                                                                            )).title("Weather Asset 3"));
                                                                             googleMap.addPolyline(new PolylineOptions().add(
                                                                                                     B_B,
                                                                                                     point12,
@@ -307,6 +349,13 @@ public class DirectFragment extends Fragment implements OnMapReadyCallback {
                                                                         String name1 = "Weather Asset";
                                                                         String name2 = "Weather Asset 2";
                                                                         if (nameMarker.equals(name1) == true) {
+                                                                            googleMap.clear();
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.870464609989156,106.80273973945748
+                                                                            )).title("Weather Asset 1"));
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.870537960015568, 106.80390988702072
+                                                                            )).title("Weather Asset 2"));
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.869792504441904, 106.80308672274282
+                                                                            )).title("Weather Asset 3"));
                                                                             googleMap.addPolyline(new PolylineOptions().add(
                                                                                                     B_C,
                                                                                                     point_a3,
@@ -322,6 +371,13 @@ public class DirectFragment extends Fragment implements OnMapReadyCallback {
                                                                             );
                                                                         }
                                                                         else if (nameMarker.equals(name2) == true) {
+                                                                            googleMap.clear();
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.870464609989156,106.80273973945748
+                                                                            )).title("Weather Asset 1"));
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.870537960015568, 106.80390988702072
+                                                                            )).title("Weather Asset 2"));
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.869792504441904, 106.80308672274282
+                                                                            )).title("Weather Asset 3"));
                                                                             googleMap.addPolyline(new PolylineOptions().add(
                                                                                                     B_C,
                                                                                                     point_a3,
@@ -339,6 +395,13 @@ public class DirectFragment extends Fragment implements OnMapReadyCallback {
                                                                             );
                                                                         }
                                                                         else {
+                                                                            googleMap.clear();
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.870464609989156,106.80273973945748
+                                                                            )).title("Weather Asset 1"));
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.870537960015568, 106.80390988702072
+                                                                            )).title("Weather Asset 2"));
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.869792504441904, 106.80308672274282
+                                                                            )).title("Weather Asset 3"));
                                                                             googleMap.addPolyline(new PolylineOptions().add(
                                                                                                     B_C,
                                                                                                     locationUserCurrent
@@ -355,6 +418,13 @@ public class DirectFragment extends Fragment implements OnMapReadyCallback {
                                                                         String name1 = "Weather Asset";
                                                                         String name2 = "Weather Asset 2";
                                                                         if (nameMarker.equals(name1) == true) {
+                                                                            googleMap.clear();
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.870464609989156,106.80273973945748
+                                                                            )).title("Weather Asset 1"));
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.870537960015568, 106.80390988702072
+                                                                            )).title("Weather Asset 2"));
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.869792504441904, 106.80308672274282
+                                                                            )).title("Weather Asset 3"));
                                                                             googleMap.addPolyline(new PolylineOptions().add(
                                                                                                     B_E,
                                                                                                     point_e3,
@@ -368,6 +438,13 @@ public class DirectFragment extends Fragment implements OnMapReadyCallback {
                                                                             );
                                                                         }
                                                                         else if (nameMarker.equals(name2) == true) {
+                                                                            googleMap.clear();
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.870464609989156,106.80273973945748
+                                                                            )).title("Weather Asset 1"));
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.870537960015568, 106.80390988702072
+                                                                            )).title("Weather Asset 2"));
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.869792504441904, 106.80308672274282
+                                                                            )).title("Weather Asset 3"));
                                                                             googleMap.addPolyline(new PolylineOptions().add(
                                                                                                     B_E,
                                                                                                     point_e3,
@@ -384,6 +461,13 @@ public class DirectFragment extends Fragment implements OnMapReadyCallback {
                                                                             );
                                                                         }
                                                                         else {
+                                                                            googleMap.clear();
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.870464609989156,106.80273973945748
+                                                                            )).title("Weather Asset 1"));
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.870537960015568, 106.80390988702072
+                                                                            )).title("Weather Asset 2"));
+                                                                            googleMap.addMarker(new MarkerOptions().position(new LatLng(10.869792504441904, 106.80308672274282
+                                                                            )).title("Weather Asset 3"));
                                                                             googleMap.addPolyline(new PolylineOptions().add(
                                                                                                     B_E,
                                                                                                     point_e3,
