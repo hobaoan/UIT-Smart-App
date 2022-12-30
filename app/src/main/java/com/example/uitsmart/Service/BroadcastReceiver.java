@@ -1,5 +1,7 @@
 package com.example.uitsmart.Service;
 
+import static com.example.uitsmart.SSLHandle.SSLHandle.handleSSLHandshake;
+
 import android.content.Context;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
@@ -50,6 +52,7 @@ public class BroadcastReceiver extends android.content.BroadcastReceiver {
                 //Create Database
                 DatabaseHelper databaseHelper = new DatabaseHelper(context);
 
+                handleSSLHandshake();
                 RequestQueue aRequestQueue = Volley.newRequestQueue(context);
 
                 jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, AccessAPI.getUrlUserCurrent(), null,
@@ -86,11 +89,6 @@ public class BroadcastReceiver extends android.content.BroadcastReceiver {
                                                 Log.e("Days",formatDays );
 
                                                 //databaseHelper.QueryData("INSERT INTO WEATHERASSET VALUES("+temp+","+humidity+","+speed+","+time+")");
-                                                //databaseHelper.QueryData("INSERT INTO WEATHERASSET (temperature, humidity, wind, time) VALUES('14.98', '48','2.11','1671030731')");
-                                                //databaseHelper.QueryData("INSERT INTO WEATHERASSET (temperature, humidity, wind, time) VALUES('13.98', '56','1.11','1671039957')");
-                                                //databaseHelper.QueryData("INSERT INTO WEATHERASSET (temperature, humidity, wind, time) VALUES('21.98', '44','2.98','1671092437')");
-                                                //databaseHelper.QueryData("INSERT INTO WEATHERASSET (temperature, humidity, wind, time) VALUES('19.98', '58','4.39','1671106486')");
-                                                //databaseHelper.QueryData("INSERT INTO WEATHERASSET (temperature, humidity, wind, time) VALUES('17.98', '64','3.3','1671113830')");1671113830
 
                                             }
 

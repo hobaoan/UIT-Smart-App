@@ -9,7 +9,7 @@
     <RelativeLayout
         android:layout_width="180dp"
         android:layout_height="match_parent"
-        android:background="@color/darkblue"/>
+        android:background="@color/siver"/>
     <ListView
         android:id="@+id/lvItemDetail"
         android:layout_width="match_parent"

@@ -210,9 +210,9 @@ public class MapFragment extends Fragment implements OnMapReadyCallback{
                                                                         WeatherAssetFragment.arrayList.add(new ItemDetail("Temperature", temp + "°C", R.drawable.weather));
                                                                         WeatherAssetFragment.arrayList.add(new ItemDetail("Humidity", humidity + "%", R.drawable.humidity));
                                                                         WeatherAssetFragment.arrayList.add(new ItemDetail("Pressure", pressure + "Mpa", R.drawable.maxtemp));
-                                                                        WeatherAssetFragment.arrayList.add(new ItemDetail("Sea level", sea_level + "m", R.drawable.mintemp));
-                                                                        WeatherAssetFragment.arrayList.add(new ItemDetail("Feels like", feels_like + "°C", R.drawable.cloud));
-                                                                        WeatherAssetFragment.arrayList.add(new ItemDetail("Ground level",grnd_level, R.drawable.cloud));
+                                                                        WeatherAssetFragment.arrayList.add(new ItemDetail("Sea level", sea_level + "m", R.drawable.sealevel));
+                                                                        WeatherAssetFragment.arrayList.add(new ItemDetail("Feels like", feels_like + "°C", R.drawable.mintemp));
+                                                                        WeatherAssetFragment.arrayList.add(new ItemDetail("Ground level",grnd_level, R.drawable.groundlevel));
                                                                         WeatherAssetFragment.arrayList.add(new ItemDetail("Speed",speed + "m/s", R.drawable.windy));
                                                                         WeatherAssetFragment.arrayList.add(new ItemDetail("Clouds",all + "%", R.drawable.cloud));
 
