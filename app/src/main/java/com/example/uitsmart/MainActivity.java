@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         broadcastReceiver = new BroadcastReceiver();
 
         mViewPager = findViewById(R.id.viewPager);
@@ -44,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
                         getSupportActionBar().setTitle("Home");
                         break;
                     case R.id.action_setting:
-                        mViewPager.setCurrentItem(3);
-                        getSupportActionBar().setTitle("Setting");
+                        mViewPager.setCurrentItem(1);
+                        getSupportActionBar().setTitle("Profile");
                         break;
                 }
                 return true;

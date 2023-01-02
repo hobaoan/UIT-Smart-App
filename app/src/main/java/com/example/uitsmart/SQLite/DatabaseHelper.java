@@ -9,8 +9,6 @@ import com.android.volley.toolbox.JsonObjectRequest;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    JsonObjectRequest jsonObjectRequest;
-    JsonArrayRequest jsonArrayRequest;
 
     public static final String DBName = "Weather Asset";
     public static final int DBVersion = 1;

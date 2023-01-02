@@ -5,8 +5,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import com.example.uitsmart.View.SettingFragment;
-import com.example.uitsmart.View.StatisticFragment;
+import com.example.uitsmart.View.ProfileFragment;
 import com.example.uitsmart.View.HomeFragment;
 
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
@@ -24,7 +23,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
             case 0:
                 return new HomeFragment();
             case 1:
-                return new SettingFragment();
+                return new ProfileFragment();
             default:
                 return new HomeFragment();
         }

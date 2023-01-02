@@ -37,12 +37,9 @@ import java.util.Map;
 
 public class BroadcastReceiver extends android.content.BroadcastReceiver {
 
-    RequestQueue mRequestQueue;
-    JsonObjectRequest jsonObjectRequest;
+
     JsonArrayRequest jsonArrayRequest;
     JSONArray assetBounds;
-    ArrayList<JSONObject> arr = new ArrayList<JSONObject>();
-    XYPlot plot;
     int Count = 0;
 
     @Override
@@ -88,7 +85,7 @@ public class BroadcastReceiver extends android.content.BroadcastReceiver {
                                                 String formatDays = simpleDateFormat1.format(date1);
                                                 Log.e("Days",formatDays );
 
-                                                //databaseHelper.QueryData("INSERT INTO WEATHERASSET VALUES("+temp+","+humidity+","+speed+","+time+")");
+                                                //databaseHelper.QueryData("INSERT INTO WEATHERASSETCURRENT VALUES("+temp+","+humidity+","+speed+","+time+")");
 
                                             }
 
