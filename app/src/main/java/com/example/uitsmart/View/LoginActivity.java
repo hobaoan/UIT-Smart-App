@@ -94,7 +94,6 @@ public class LoginActivity extends AppCompatActivity {
                             String remainingLetters = description.substring(1, description.length());
                             firstLetter = firstLetter.toUpperCase();
                             description = firstLetter + remainingLetters;
-                            Log.e("MyResponse","" + description);
 
                             // Bắt đầu code gửi thông báo
                             if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
@@ -135,8 +134,6 @@ public class LoginActivity extends AppCompatActivity {
         mRequestQueue.add(jsonObjectRequest);
         // Kết thúc code get api
 
-        notificationManagerCompat.notify(1,notification);
-
         btnLogin = findViewById(R.id.btnLogin);
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -150,7 +147,6 @@ public class LoginActivity extends AppCompatActivity {
 
                 etUserName = dialogLogin.findViewById(R.id.etUserName);
                 etPassWord = dialogLogin.findViewById(R.id.etPassWord);
-
 
                 btnLoginDL = dialogLogin.findViewById(R.id.btnLoginDL);
                 btnLoginDL.setOnClickListener(new View.OnClickListener() {
@@ -172,6 +168,8 @@ public class LoginActivity extends AppCompatActivity {
                             Toast.makeText(LoginActivity.this,
                                             "Logged in successfully", Toast.LENGTH_SHORT)
                                     .show();
+                            notificationManagerCompat.notify(1,notification);
+
                         }
                         else {
                             Toast.makeText(LoginActivity.this,
