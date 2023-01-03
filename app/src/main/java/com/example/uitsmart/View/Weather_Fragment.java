@@ -139,7 +139,7 @@ public class Weather_Fragment extends Fragment {
     }
     public void GetCurrentWeatherData(String data) {
         RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, AccessAPI.getUrlGoogleWeather(),
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, "https://api.openweathermap.org/data/2.5/weather?q="+data+"&units=metric&appid=ac212f5768bf3e2f84201adbd2bc7961",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

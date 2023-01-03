@@ -85,7 +85,7 @@ public class BroadcastReceiver extends android.content.BroadcastReceiver {
                                                 String formatDays = simpleDateFormat1.format(date1);
                                                 Log.e("Days",formatDays );
 
-                                                //databaseHelper.QueryData("INSERT INTO WEATHERASSETCURRENT VALUES("+temp+","+humidity+","+speed+","+time+")");
+                                                //databaseHelper.QueryData("INSERT INTO WEATHERASSET VALUES("+temp+","+humidity+","+speed+","+time+")");
 
                                             }
 
@@ -117,7 +117,7 @@ public class BroadcastReceiver extends android.content.BroadcastReceiver {
                 database.close();
 
             } else {
-                Toast.makeText(context, "No Connect Internet", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(context, "No Connect Internet", Toast.LENGTH_SHORT).show();
             }
         }
     }

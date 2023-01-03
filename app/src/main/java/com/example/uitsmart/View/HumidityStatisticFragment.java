@@ -65,21 +65,21 @@ public class HumidityStatisticFragment extends Fragment{
         handleSSLHandshake();
         mRequestQueue = Volley.newRequestQueue(getActivity());
 
-        Cursor cursor = db.rawQuery("SELECT * FROM WEATHERASSETCURRENT", null);
+        Cursor cursor = db.rawQuery("SELECT * FROM WEATHERASSET", null);
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
-            String time = cursor.getString(3);
-            long l1 = Long.valueOf(time);
+            Long time = cursor.getLong(3);
+            long l1 = time;
             Date date1 = new Date(l1*1000L);
             SimpleDateFormat simpleDateFormat1 = new SimpleDateFormat("dd-MM");
             String formatDays = simpleDateFormat1.format(date1);
- //           if (formatDays.equals(example) == false) {
+            if (formatDays.equals(example) == false) {
                 temperatures.add(cursor.getDouble(0));
                 humidities.add(cursor.getDouble(1));
                 winds.add(cursor.getDouble(2));
                 times.add(formatDays);
                 example = formatDays;
-//            }
+            }
             cursor.moveToNext();
         }
         cursor.close();

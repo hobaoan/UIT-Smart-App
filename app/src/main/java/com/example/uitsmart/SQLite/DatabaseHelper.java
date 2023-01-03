@@ -24,14 +24,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql = "CREATE TABLE WEATHERASSETCURRENT(temperature char, humidity integer, wind char, time char )";
+        String sql = "CREATE TABLE WEATHERASSET(temperature char, humidity integer, wind char, time char )";
         db.execSQL(sql);
 
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        String sql = "DROP TABLE IF EXISTS WEATHERASSETCURRENT";
+        String sql = "DROP TABLE IF EXISTS WEATHERASSET";
         db.execSQL(sql);
         onCreate(db);
     }
